@@ -63,7 +63,7 @@ percent of any given base existing in the library resulting in a sampling
 variance. There is a term, depth of coverage, which refers to the percent of
 transcripts measured, and in order to increase coverage and reduce sampling
 variation, deeper sequencing is required. Wang et al. (2011)[4] suggest that a
-minimum of 10 million reads per sample is needed in order to achieve abovemedian
+minimum of 10 million reads per sample is needed in order to achieve above median
 coverage.
 
 ~What are the data file formats~
