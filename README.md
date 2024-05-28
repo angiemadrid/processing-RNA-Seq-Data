@@ -31,7 +31,7 @@ biologists and bioinformaticians working with biological data.
 
 WHERE THE DATA COMES FROM
 
-~What is the data~
+What is the data -
 
 The type of data used in this project is created when a biological sample of
 RNA is processed through a next generation sequencing (NGS) instrument.
@@ -54,7 +54,7 @@ the images are analyzed, bases are detected, and base calls are assigned. The
 resulting output is millions of short-sequence reads, which are 30-400 base
 pairs (bp) long and correspond to individual cDNA fragments.[2,3]
 
-~How data is collected~
+How data is collected -
 
 Due to their small size, short reads often do not span the entire cDNA
 sequence resulting in uneven coverage of individual transcripts. In addition,
@@ -66,7 +66,7 @@ variation, deeper sequencing is required. Wang et al. (2011)[4] suggest that a
 minimum of 10 million reads per sample is needed in order to achieve above median
 coverage.
 
-~What are the data file formats~
+What are the data file formats -
 
 There are a variety of file formats for unprocessed (raw) sequence data used,
 depending on which instrument is used for the sequencing. In general, these
@@ -78,7 +78,7 @@ through GEO and are converted and saved in the FASTQ file format, which
 specifically, contains the read identifiers (assigned by the sequencer
 software), nucleotide sequences (i.e., the reads) and quality scores.
 
-~Phred quality scores~
+Phred quality scores -
 
 The Phred quality scores provided in FASTQ files are a measure of the
 probability that a base call of a given nucleotide is not correct. For example, a
@@ -103,7 +103,7 @@ below. The majority of Bioconductor’s packages, and all the packages used
 here create S4 objects for storage and retrieval of the data, instead of the
 more informal S3 class object, a data frame.
 
-~Packages~
+Packages -
 
 SRAdb: This package establishes an SQL database using the data from
 GEO’s website and interacts directly with the website for accessing the
@@ -151,7 +151,7 @@ annotation and counting mapped reads.
 
 DESCRIPTION OF PIPELINE
 
-~Obtain data~
+Obtain data -
 
 The dataset used in this project comes from a sequencing study (Nobuta,
 2008)[6] that examined RNA features of size distribution, tissue-specific
@@ -179,7 +179,7 @@ Using the plotting functions for this object the quality frequencies by position
 and per base sequence content can be visualized. The qrqc package also
 provides plotting methods.
 
-~Preprocess data~
+Preprocess data -
 
 The next step in the pipeline is the preprocessing of the data. First, the
 adapters need to be trimmed from the sequences. Recall that adapter
@@ -206,7 +206,7 @@ sequences remaining. In order to obtain a similar number of sequences, a
 quality score of 20 was used for this project. The preprocessing for this project
 resulted in 2,371,031 sequences.
 
-~Align data~
+Align data -
 
 The next step after preprocessing is the alignment of the reads to a reference
 genome. Mapping short reads to reference in order to align them to genomic
@@ -218,7 +218,7 @@ directory. This file was then passed in to the buildindex() function, which
 created a reference index. The method align() aligned the preprocessed FASTQ file to this reference
 index producing a BAM file that is ready to be annotated and analyzed.
 
-~Annotate and count mapped reads~
+Annotate and count mapped reads -
 
 After reads have been aligned to a reference, the next step is to determine the
 identities of the genes within the sample. This is done through the
